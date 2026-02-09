@@ -16,3 +16,5 @@ customer[1].push("TPIndustries.eyefind.info") // email change
 customer[1].shift()
 
 customer[2].push(612.23) // New purchase
+
+customer.forEach((x, i) => console.log(x)) //loop(?)
