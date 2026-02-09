@@ -1,24 +1,28 @@
 let customer = [            // Array
-    ["Joe"],
-    ["Joe@joemail.joe"],
-    [112.23, 72.65, 165.33]
-
+    ["Joe","Joe@joemail.joe", [112.23, 72.65, 165.33]],
+    ["Twilight","sparkle@equestriamail.magic", [98.71, 238.97, 64.72]],
+    ["Celestia","Celestia@royalmail.queen", [98.37, 49.83, 247.98]]
 ]
 
-console.log(`Name: ${customer[0]}`) // Console show
-console.log(`Email: ${customer[1]}`)
-console.log(`Purchase: ${customer[2][0]}`)
+customer.forEach(element => {
+    const name = element[0]
+    const email = element[1]
+    const orders = element[2]
 
-customer[0].push("Trevor") // Name change
-customer[0].shift()
+    console.log(`${name} | ${email} | Orders: ${orders}`)
+});
 
-customer[1].push("TPIndustries.eyefind.info") // email change
-customer[1].shift()
+customer.push(["Trevor", "TPIndustries.eyefind.info", [78.28, 276.12, 33.12]]) // change
+customer.shift()
 
-customer[2].push(612.23) // New purchase
+customer[0][1] = ("sparkle@royalmail.queen") // email change
 
-customer.forEach((x, i) => console.log(x)) //loop(?)
+customer[2][2].push(612.23) // New purchase
 
-console.log(`Name: ${customer[0]}`) // Console show
-console.log(`Email: ${customer[1]}`)
-console.log(`Total number of purchase: ${customer[2].length}`)
+customer.forEach(element => {
+    const name = element[0]
+    const email = element[1]
+    const orders = element[2]
+
+    console.log(`${name} | ${email} | Amount of orders: ${orders.length}`)
+});
