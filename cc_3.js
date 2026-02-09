@@ -18,3 +18,7 @@ customer[1].shift()
 customer[2].push(612.23) // New purchase
 
 customer.forEach((x, i) => console.log(x)) //loop(?)
+
+console.log(`Name: ${customer[0]}`) // Console show
+console.log(`Email: ${customer[1]}`)
+console.log(`Total number of purchase: ${customer[2].length}`)
